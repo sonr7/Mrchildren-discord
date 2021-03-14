@@ -11,8 +11,8 @@ with open('kasi.txt') as f:
 
 @client.event
 async def on_message(message):
-    if '#ミスチル' in message.content and message.content.startswith('#'):
-        kasi = message.content.replace('#ミスチル')
+    if '#Mr.Children' in message.content and message.content.startswith('#'):
+        kasi = message.content.replace('#Mr.Children')
         await message.channel.send(kasi_dict[kasi])
                  
                  
