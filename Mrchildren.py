@@ -6,11 +6,17 @@ token = os.environ.get('DISCORD_BOT_TOKEN')
 
 client = discord.Client()
 
+with open('kasi.txt') as f:
+    kasi_dict = {line.split(:)[0]: line[1] for line in f.readlines()}
+
 @client.event
 async def on_message(message):
     if '#ミスチル' or '#Mr.Children' in message.content and message.content.startswith('#'):
-        if 'ロード・アイ・ミス・ユー' in message.content:
-            await message.channel.send(
+        kasi = message.content.remove('#ミスチル' or '#Mr.Children')
+        await message.channel.send(kasi_dict[kasi])
+                 
+                 
+      
 
 
 client.run(token)
