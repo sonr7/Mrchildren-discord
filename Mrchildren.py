@@ -12,8 +12,9 @@ with open('kasi.txt') as f:
 @client.event
 async def on_message(message):
     if '#ミスチル' or '#Mr.Children' in message.content and message.content.startswith('#'):
-        kasi_list = message.content.split()
-        kasi = kasi_list[1]
+        kasi_str = message.content
+        kasi_str.remove('#ミスチル' or '#Mr.Children')
+        kasi = kasi_str
         await message.channel.send(kasi_dict[kasi])
                  
                  
