@@ -8,7 +8,7 @@ client = discord.Client()
 
 @client.event
 async def on_message(message):
-    if '#Mr.Children:' in message.content and message.content.startswith('#'):
+    if '#Mr.Children:' in message.content and message.content.startswith('#Mr.Children:'):
         kasi = message.content.replace('#Mr.Children:', '')
         with open(kasi) as kasii:
             kasiyaru = kasii.read()
