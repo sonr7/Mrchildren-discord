@@ -10,7 +10,9 @@ client = discord.Client()
 async def on_message(message):
     if '#Mr.Children:' in message.content and message.content.startswith('#'):
         kasi = message.content.replace('#Mr.Children:', '')
-        await message.channel.send(kasi_dict[kasi])
+        with open(kasi) as kasii:
+            kasiyaru = kasii.read()
+        await message.channel.send(kasiyaru)
                  
                  
       
